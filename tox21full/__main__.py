@@ -17,7 +17,7 @@ def main():
     tox21full = Tox21Full()
     df = tox21full.construct()
     if args.format == "csv":
-        df.to_csv(args.output)
+        df.to_csv(args.output, index=False)
     elif args.format == "parquet":
         df.to_parquet(args.output)
     else:
