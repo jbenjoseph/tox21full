@@ -108,9 +108,9 @@ class Tox21Full:
                 for name, group in raw_df.groupby("SMILES"):
                     try:
                         if group["ASSAY_OUTCOME"].str.contains(test_type).any():
-                            yield name, 1.0
+                            yield name, 1
                         else:
-                            yield name, 0.0
+                            yield name, 0
                     except AttributeError:
                         yield name, float("NaN")
 
