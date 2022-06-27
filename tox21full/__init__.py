@@ -114,7 +114,9 @@ class Tox21Full:
                     except AttributeError:
                         yield name, float("NaN")
 
-            return pd.DataFrame(clarify_df(df), columns=["smiles", assay])
+            return pd.DataFrame(
+                clarify_df(df), columns=["smiles", assay.replace("tox21-", "")]
+            )
 
         result = reduce(
             lambda left, right: pd.merge(
