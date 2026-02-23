@@ -24,7 +24,7 @@ FAKE_SUMMARY_JSON = json.dumps(
                 {
                     "AID": 200,
                     "SourceID": "TST200",
-                    "Name": "Another assay (not a recap)",
+                    "Name": "Another assay (not a tox21 recap)",
                 },
             ]
         }

@@ -94,7 +94,9 @@ class Tox21Full:
             try:
                 df = self.to_df_by_assay(assay["AID"])
                 yield assay, df
-            except Exception:
+            except Exception as exc:
+                import warnings
+                warnings.warn(f"Skipping AID {assay['AID']}: {exc}")
                 continue
             time.sleep(0.2)
 
